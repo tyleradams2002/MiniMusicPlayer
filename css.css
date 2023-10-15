@@ -1,0 +1,95 @@
+/* This section is for the container */
+.musicPlayerContainer {
+    height: 175px;
+    width: 175px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* This section is for the player image */
+.musicPlayerImage {
+    height: 175px;
+    width: 175px;
+    position: absolute;
+    background: linear-gradient(to right, rgb(57, 64, 243), rgb(3, 165, 6));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* (WIP) To make it actually look like a disc lmao */
+
+/*.musicPlayerImage:before,*/
+/*.musicPlayerImage:after {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    border: 5px solid transparent;*/
+/*    border-top-color: #2c2424;*/
+/*    border-bottom-color: #2c2424;*/
+/*    border-radius: 50%;*/
+/*}*/
+/*.record:before {*/
+/*    height: 135px;*/
+/*    width: 135px;*/
+/*}*/
+/*.record:after {*/
+/*    height: 95px;*/
+/*    width: 95px;*/
+/*}*/
+
+/* This section is for the play/pause images */
+
+.musicPlayerButtonPlay {
+    box-sizing: border-box;
+    width: 74px;
+    height: 74px;
+    border-style: solid;
+    border-width: 37px 0 37px 74px;
+    border-color: rgba(0,0,0,0%) rgba(0,0,0,0%) rgba(0,0,0,0%) whitesmoke;
+    background: rgba(0,0,0,0%);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 57%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.musicPlayerButtonPause {
+    width: 74px;
+    height: 74px;
+    background: rgba(0,0,0,0%);
+    border-color: rgba(0,0,0,0%) rgba(0,0,0,0%) rgba(0,0,0,0%) whitesmoke;
+    border-style: double;
+    border-width: 0 0 0 60px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 54%;
+    top: 50%;
+    cursor: pointer;
+}
+
+/* For Hover Effect */
+
+.musicPlayerButtonPlay:hover {
+    border-color: rgba(0,0,0,0%) rgba(0,0,0,0%) rgba(0,0,0,0%) purple;
+}
+
+.musicPlayerButtonPause:hover {
+    border-color: rgba(0,0,0,0%) rgba(0,0,0,0%) rgba(0,0,0,0%) purple;
+}
+
+/* This section is for the animation */
+
+.active {
+   animation: spin 3s 1s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes spin{
+    100% {
+        transform: rotate(360deg)
+    }
+}
